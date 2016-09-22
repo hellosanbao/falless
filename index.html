@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>首页</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<script src="js/jquery-1.10.min.js"></script>
+	<script src="js/jquery.falless.js"></script>
+</head>
+<style>
+	#container{position: relative;}
+	.gird{width: 300px;float: left;padding-left:15px;padding-bottom:15px;transition:all 0.5s;left:0;top: 0;}
+	.gird .nr{padding: 10px;background: #fff;border-radius: 5px;box-shadow: 0 0 5px #ccc;position:relative;}
+</style>
+<body>
+	<div id="container" class="clearfix">
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/1.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/2.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/3.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/4.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/5.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/6.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/7.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/8.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/9.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/10.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/11.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/12.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/13.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/14.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/14.jpg" alt="">
+			</div>
+		</div>
+		<div class="gird img-box-x">
+			<div class="nr shadow">
+				<img src="images/14.jpg" alt="">
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+    $("#container").falless({offsetY:15,})
+    window.onscroll=function(){
+    	winH=$(window).height();
+    	docH=$("body").height();
+    	scrTop=$(window).scrollTop();
+    	if((scrTop+winH+100)>=docH){
+    		for (var i = 1; i <7; i++) {
+    			console.log(i)
+    			var gird=$('<div class="gird img-box-x">');
+    			var nr=$('<div class="nr shadow">');
+    			var img=$('<img src="images/'+i+'.jpg" alt="">');
+    			$("#container").append(gird.append(nr.append(img)))
+    		};
+    		$("#container").falless({offsetY:15,})
+    	}
+    }
+    
+</script>
+</html>
