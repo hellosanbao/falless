@@ -46,16 +46,6 @@
                     col=this.opts.col
                }
                return col;
-          },
-          isLoad:function(){
-               var oftop=Math.max.apply(null,this.colarr);
-               var wintop=$(window).height()+$(window).scrollTop();
-               if(oftop>=wintop){
-                    return true
-               }else{
-                    return false;
-               }
-                    
           }
       };
      $.fn.falless=function(config){
